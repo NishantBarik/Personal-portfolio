@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects | Nishant Barik</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    :root {
+      --bg-color: #1f242d;
+      --text-color: #fff;
+      --highlight: #00abf0;
+      --card-glow: rgba(0, 171, 240, 0.2);
+    }
+
+    body.light-mode {
+      --bg-color: #f0f0f0;
+      --text-color: #222;
+      --highlight: #007acc;
+      --card-glow: rgba(0, 122, 204, 0.2);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: var(--bg-color);
+      color: var(--text-color);
+      transition: background 0.3s, color 0.3s;
+      overflow-x: hidden;
+    }
+
+    .toggle-mode {
+      position: fixed;
+      top: 20px;
+      right: 40px;
+      background: var(--highlight);
+      color: var(--bg-color);
+      border: none;
+      padding: 10px 20px;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      z-index: 1000;
+      transition: 0.3s;
+    }
+
+    .projects-section {
+      width: 85%;
+      padding: 100px 10% 50px;
+      min-height: 100vh;
+      background: linear-gradient(120deg, #1f242d, #1a1d23, #2a2e35);
+      background-size: 400% 400%;
+      animation: gradientFlow 15s ease infinite;
+    }
+
+    .projects-section h1 {
+      font-size: 48px;
+      font-weight: 700;
+      margin-bottom: 40px;
+      color: var(--highlight);
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .project-card {
+      backdrop-filter: blur(12px);
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 8px 24px var(--card-glow);
+      padding: 20px;
+      transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+      animation: fadeInUp 1s ease forwards;
+      color: var(--text-color);
+    }
+
+    .project-card:hover {
+      transform: scale(1.03);
+      background: rgba(255, 255, 255, 0.1);
+      box-shadow: 0 12px 40px var(--highlight);
+    }
+
+    .project-card h2 {
+      font-size: 22px;
+      margin-bottom: 10px;
+      color: var(--highlight);
+    }
+
+    .project-card p {
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .project-links {
+      margin-top: 15px;
+    }
+
+    .project-links a {
+      margin-right: 15px;
+      text-decoration: none;
+      color: var(--highlight);
+      font-weight: 500;
+    }
+
+    .project-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      0% {
+        transform: translateY(30px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes gradientFlow {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <button class="toggle-mode" onclick="toggleMode()">Toggle Mode</button>
+
+  <section class="projects-section">
+    <h1>My Projects</h1>
+
+    <div class="projects-grid">
+      <div class="project-card">
+        <h2>Hospital Management System</h2>
+        <p>Python + MySQL-based application to manage patients, billing, and appointments. Built with SQL queries and CRUD operations.</p>
+        <div class="project-links">
+          <a href="#" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h2>Power BI Inflation Dashboard</h2>
+        <p>Analyzed global inflation trends using Power BI with DAX, KPI cards, and dynamic filters for visual insights.</p>
+        <div class="project-links">
+          <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> View Report</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h2>SQL Retail Database</h2>
+        <p>Designed normalized schema for an e-commerce system. Includes stored procedures, indexing, and performance-optimized queries.</p>
+        <div class="project-links">
+          <a href="#" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h2>Java Quiz Application</h2>
+        <p>Java Swing-based quiz app with timer, scoring, and leaderboard. OOP structure and user interaction with GUI components.</p>
+        <div class="project-links">
+          <a href="#" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h2>Expense Tracker (Java)</h2>
+        <p>OOP-based console application for managing expenses. Includes budget alerts and monthly summaries using file handling.</p>
+        <div class="project-links">
+          <a href="#" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function toggleMode() {
+      document.body.classList.toggle("light-mode");
+    }
+  </script>
+
+</body>
+</html>

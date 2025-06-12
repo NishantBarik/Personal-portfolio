@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Resume | Nishant Barik</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    :root {
+      --bg-color: #1f242d;
+      --text-color: #fff;
+      --highlight: #00abf0;
+    }
+
+    body.light-mode {
+      --bg-color: #f4f4f4;
+      --text-color: #111;
+      --highlight: #007acc;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: var(--bg-color);
+      color: var(--text-color);
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      margin: 100px auto 40px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 48px;
+      color: var(--highlight);
+      margin-bottom: 20px;
+    }
+
+    .resume-frame {
+      width: 100%;
+      height: 700px;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 171, 240, 0.2);
+    }
+
+    .download-btn {
+      margin-top: 20px;
+      background: var(--highlight);
+      color: var(--bg-color);
+      border: none;
+      padding: 12px 24px;
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: 0.3s;
+    }
+
+    .download-btn:hover {
+      background: #fff;
+      color: var(--highlight);
+      border: 2px solid var(--highlight);
+    }
+
+    .toggle-mode {
+      position: fixed;
+      top: 20px;
+      right: 40px;
+      background: var(--highlight);
+      color: var(--bg-color);
+      border: none;
+      padding: 10px 20px;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      z-index: 1000;
+      transition: 0.3s;
+    }
+  </style>
+</head>
+<body>
+
+  <button class="toggle-mode" onclick="toggleMode()">Toggle Mode</button>
+
+  <div class="container">
+    <h1>My Resume</h1>
+
+    <!-- Resume Viewer -->
+    <iframe class="resume-frame" src="NISHANT_BARIK_RESUME.pdf" title="Nishant Barik Resume"></iframe>
+
+    <!-- Download Button -->
+    <a class="download-btn" href="NISHANT_BARIK_RESUME.pdf" download>
+      <i class="fas fa-download"></i> Download Resume
+    </a>
+  </div>
+
+  <script>
+    function toggleMode() {
+      document.body.classList.toggle('light-mode');
+    }
+  </script>
+
+</body>
+</html>

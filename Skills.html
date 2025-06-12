@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Skills | Nishant Barik</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    :root {
+      --bg-color: #1f242d;
+      --text-color: #fff;
+      --highlight: #00abf0;
+      --card-bg: #27313f;
+      --bar-bg: #1f2a38;
+    }
+
+    body.light-mode {
+      --bg-color: #f9f9f9;
+      --text-color: #222;
+      --highlight: #007acc;
+      --card-bg: #fff;
+      --bar-bg: #ddd;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: var(--bg-color);
+      color: var(--text-color);
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .skills-section {
+      width: 85%;
+      padding: 100px 10% 50px;
+      min-height: 100vh;
+    }
+
+    .skills-section h1 {
+      font-size: 48px;
+      font-weight: 700;
+      margin-bottom: 40px;
+      color: var(--highlight);
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    .toggle-mode {
+      position: fixed;
+      top: 20px;
+      right: 40px;
+      background: var(--highlight);
+      color: var(--bg-color);
+      border: none;
+      padding: 10px 20px;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      z-index: 1000;
+      transition: 0.3s;
+    }
+
+    .skill-category {
+      margin-bottom: 50px;
+      animation: fadeInUp 1.2s ease forwards;
+    }
+
+    .skill-category h2 {
+      font-size: 28px;
+      color: var(--highlight);
+      margin-bottom: 20px;
+    }
+
+    .skill {
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .skill-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 8px;
+      position: relative;
+    }
+
+    .skill-header i {
+      font-size: 20px;
+      color: var(--highlight);
+      width: 25px;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .skill-header h3 {
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .tooltip {
+      position: absolute;
+      bottom: 125%;
+      left: 0;
+      background: var(--highlight);
+      color: var(--bg-color);
+      padding: 5px 10px;
+      border-radius: 6px;
+      font-size: 13px;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(10px);
+      transition: opacity 0.3s, transform 0.3s;
+      z-index: 999;
+    }
+
+    .skill-header:hover .tooltip {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .bar {
+      width: 100%;
+      background: var(--bar-bg);
+      border-radius: 8px;
+      overflow: hidden;
+      height: 20px;
+    }
+
+    .bar span {
+      display: block;
+      height: 100%;
+      background: var(--highlight);
+      animation: growBar 2s ease forwards;
+    }
+
+    @keyframes growBar {
+      from { width: 0; }
+      to { width: var(--bar-width); }
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        transform: translateY(30px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <button class="toggle-mode" onclick="toggleMode()">Toggle Mode</button>
+
+  <section class="skills-section">
+    <h1>My Skills</h1>
+
+    <!-- Languages -->
+    <div class="skill-category">
+      <h2>Languages</h2>
+
+      <div class="skill" style="--bar-width: 90%">
+        <div class="skill-header">
+          <i class="fab fa-java"><span class="tooltip">Backend development & OOP</span></i>
+          <h3>Java</h3>
+        </div>
+        <div class="bar"><span></span></div>
+      </div>
+
+      <div class="skill" style="--bar-width: 85%">
+        <div class="skill-header">
+          <i class="fab fa-python"><span class="tooltip">Scripting, data, and AI</span></i>
+          <h3>Python</h3>
+        </div>
+        <div class="bar"><span></span></div>
+      </div>
+
+      <div class="skill" style="--bar-width: 80%">
+        <div class="skill-header">
+          <i class="fas fa-database"><span class="tooltip">Querying, joins, normalization</span></i>
+          <h3>SQL</h3>
+        </div>
+        <div class="bar"><span></span></div>
+      </div>
+
+      <div class="skill" style="--bar-width: 70%">
+        <div class="skill-header">
+          <i class="fab fa-js-square"><span class="tooltip">Logic & dynamic websites</span></i>
+          <h3>JavaScript</h3>
+        </div>
+        <div class="bar"><span></span></div>
+      </div>
+
+      <div class="skill" style="--bar-width: 60%">
+        <div class="skill-header">
+          <i class="fas fa-code"><span class="tooltip">Problem-solving foundation</span></i>
+          <h3>C</h3>
+        </div>
+        <div class="bar"><span></span></div>
+      </div>
+    </div>
+
+    <!-- Web Technologies -->
+    <div class="skill-category">
+      <h2>Web Technologies</h2>
+
+      <div class="skill" style="--bar-width: 80%">
+        <div class="skill-header">
+          <i class="fab fa-html5"><span class="tooltip">Markup and structure</span></i>
+          <h3>HTML5</h3>
+        </div>
+        <div class="bar"><span></span></div>
+      </div>
+
+      <div class="skill" style="--bar-width: 75%">
+        <div class="skill-header">
+          <i class="fab fa-css3-alt"><span class="tooltip">Styling and layouts</span></i>
+          <h3>CSS3</h3>
+        </div>
+        <div class="bar"><span></span></div>
+      </div>
+
+      <div class="skill" style="--bar-width: 70%">
+        <div class="skill-header">
+          <i class="fab fa-react"><span class="tooltip">Frontend UI library</span></i>
+          <h3>React</h3>
+        </div>
+        <div class="bar"><span></span></div>
+      </div>
+    </div>
+
+    <!-- Tools & Platforms -->
+    <div class="skill-category">
+      <h2>Tools & Platforms</h2>
+
+      <div class="skill" style="--bar-width: 80%">
+        <div class="skill-header">
+          <i class="fas fa-chart-line"><span class="tooltip">BI dashboarding</span></i>
+          <h3>Power BI</h3>
+        </div>
+        <div class="bar"><span></span></div>
+      </div>
+
+      <div class="skill" style="--bar-width: 70%">
+        <div class="skill-header">
+          <i class="fas fa-chart-pie"><span class="tooltip">Visual analytics</span></i>
+          <h3>Tableau</h3>
+        </div>
+        <div class="bar"><span></span></div>
+      </div>
+
+      <div class="skill" style="--bar-width: 75%">
+        <div class="skill-header">
+          <i class="fas fa-database"><span class="tooltip">RDBMS system</span></i>
+          <h3>MySQL</h3>
+        </div>
+        <div class="bar"><span></span></div>
+      </div>
+
+      <div class="skill" style="--bar-width: 85%">
+        <div class="skill-header">
+          <i class="fab fa-github"><span class="tooltip">Version control & repos</span></i>
+          <h3>GitHub</h3>
+        </div>
+        <div class="bar"><span></span></div>
+      </div>
+
+      <div class="skill" style="--bar-width: 65%">
+        <div class="skill-header">
+          <i class="fas fa-cloud"><span class="tooltip">Cloud basics</span></i>
+          <h3>AWS Basics</h3>
+        </div>
+        <div class="bar"><span></span></div>
+      </div>
+
+      <div class="skill" style="--bar-width: 75%">
+        <div class="skill-header">
+          <i class="fas fa-file-excel"><span class="tooltip">Data analysis</span></i>
+          <h3>Excel</h3>
+        </div>
+        <div class="bar"><span></span></div>
+      </div>
+
+      <div class="skill" style="--bar-width: 60%">
+        <div class="skill-header">
+          <i class="fas fa-vial"><span class="tooltip">Data science toolkit</span></i>
+          <h3>Anaconda</h3>
+        </div>
+        <div class="bar"><span></span></div>
+      </div>
+
+      <div class="skill" style="--bar-width: 70%">
+        <div class="skill-header">
+          <i class="fas fa-network-wired"><span class="tooltip">Network and IoT</span></i>
+          <h3>Cisco</h3>
+        </div>
+        <div class="bar"><span></span></div>
+      </div>
+    </div>
+
+    <!-- Core Concepts -->
+    <div class="skill-category">
+      <h2>Core Concepts</h2>
+
+      <div class="skill" style="--bar-width: 90%">
+        <div class="skill-header">
+          <i class="fas fa-cogs"><span class="tooltip">Algorithms & problem solving</span></i>
+          <h3>DSA</h3>
+        </div>
+        <div class="bar"><span></span></div>
+      </div>
+
+      <div class="skill" style="--bar-width: 85%">
+        <div class="skill-header">
+          <i class="fas fa-cube"><span class="tooltip">Modular design</span></i>
+          <h3>OOP</h3>
+        </div>
+        <div class="bar"><span></span></div>
+      </div>
+
+      <div class="skill" style="--bar-width: 80%">
+        <div class="skill-header">
+          <i class="fas fa-brain"><span class="tooltip">Logic & strategy</span></i>
+          <h3>Problem Solving</h3>
+        </div>
+        <div class="bar"><span></span></div>
+      </div>
+
+      <div class="skill" style="--bar-width: 85%">
+        <div class="skill-header">
+          <i class="fas fa-code-branch"><span class="tooltip">Version tracking</span></i>
+          <h3>Git</h3>
+        </div>
+        <div class="bar"><span></span></div>
+      </div>
+    </div>
+
+  </section>
+
+  <script>
+    function toggleMode() {
+      document.body.classList.toggle("light-mode");
+    }
+  </script>
+
+</body>
+</html>

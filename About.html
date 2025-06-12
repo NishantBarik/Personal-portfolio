@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Me | Nishant Barik</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .about-section {
+      width: 85%;
+      min-height: 100vh;
+      padding: 100px 10% 50px;
+      color: #fff;
+    }
+
+    .about-section h1 {
+      font-size: 48px;
+      font-weight: 700;
+      margin-bottom: 30px;
+      color: #00abf0;
+      opacity: 0;
+      animation: slideRight 1s ease forwards;
+    }
+
+    .about-content {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      opacity: 0;
+      animation: slideLeft 1s ease forwards;
+      animation-delay: 0.6s;
+    }
+
+    .about-block {
+      background: #27313f;
+      padding: 20px 25px;
+      border-left: 5px solid #00abf0;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,171,240,0.15);
+      animation: zoomIn 1s ease forwards;
+    }
+
+    .about-block h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #00abf0;
+    }
+
+    .about-block p {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .highlight {
+      color: #00abf0;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <a href="#" class="logo">Nishant Barik</a>
+    <nav class="navbar">
+      <a href="index.html" style="--i:1">Home</a>
+      <a href="about.html" class="active" style="--i:2">About</a>
+      <a href="projects.html" style="--i:3">Projects</a>
+      <a href="contact.html" style="--i:4">Contact</a>
+    </nav>
+  </header>
+
+  <section class="about-section">
+    <h1>About Me</h1>
+
+    <div class="about-content">
+      <div class="about-block" style="animation-delay: 0.8s;">
+        <h2>Who am I?</h2>
+        <p>I'm <span class="highlight">Nishant Barik</span>, a Computer Science and Engineering student passionate about building impactful digital solutions. With a strong foundation in <span class="highlight">Java, Python, SQL</span>, and tools like <span class="highlight">Power BI, MySQL, and React</span>, I strive to bridge the gap between logic and creativity in tech.</p>
+      </div>
+
+      <div class="about-block" style="animation-delay: 1s;">
+        <h2>Education</h2>
+        <p>I’m pursuing my B.Tech at <span class="highlight">ITER, SOA University</span> (2022–2026) with a CGPA of <span class="highlight">8.42</span>. I’ve also scored above 80% in both my 10th and 12th grades.</p>
+      </div>
+
+      <div class="about-block" style="animation-delay: 1.2s;">
+        <h2>What I Do</h2>
+        <p>I specialize in <span class="highlight">full-stack development</span>, <span class="highlight">data analytics</span>, and <span class="highlight">problem-solving</span>. I’ve built projects like a Hospital Management System using Python + SQL, a Java-based Quiz App, and a Power BI dashboard for inflation analysis.</p>
+      </div>
+
+      <div class="about-block" style="animation-delay: 1.4s;">
+        <h2>Competitive Programming & Certifications</h2>
+        <p>I actively solve problems on platforms like <span class="highlight">CodeChef (100+ solved)</span>, <span class="highlight">LeetCode</span>, and <span class="highlight">HackerRank</span>. I hold certifications from <span class="highlight">Microsoft, Google Cloud, AWS</span>, and more.</p>
+      </div>
+
+      <div class="about-block" style="animation-delay: 1.6s;">
+        <h2>Hobbies</h2>
+        <p>Outside coding, I enjoy <span class="highlight">reading fantasy novels, exploring game mechanics, and diving into sword art-based stories</span>. I'm also fascinated by anime-style world-building and storytelling.</p>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

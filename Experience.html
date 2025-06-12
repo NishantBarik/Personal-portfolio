@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Experience | Nishant Barik</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .experience-section {
+      width: 85%;
+      padding: 100px 10% 50px;
+      color: #fff;
+      min-height: 100vh;
+    }
+    .experience-section h1 {
+      font-size: 48px;
+      font-weight: 700;
+      margin-bottom: 40px;
+      color: #00abf0;
+      opacity: 0;
+      animation: slideBottom 1s ease forwards;
+    }
+    .experience-timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      position: relative;
+    }
+    .exp-block {
+      background: #27313f;
+      padding: 20px 25px;
+      border-left: 5px solid #00abf0;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,171,240,0.15);
+      animation: slideRight 1s ease forwards;
+    }
+    .exp-block h2 {
+      color: #00abf0;
+      margin-bottom: 10px;
+    }
+    .exp-block p {
+      line-height: 1.7;
+      font-size: 16px;
+    }
+    .exp-block:nth-child(2) { animation: slideLeft 1s ease forwards; animation-delay: 0.2s; }
+    .exp-block:nth-child(3) { animation: slideTop 1s ease forwards; animation-delay: 0.4s; }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <a href="#" class="logo">Nishant Barik</a>
+    <nav class="navbar">
+      <a href="index.html" style="--i:1">Home</a>
+      <a href="about.html" style="--i:2">About</a>
+      <a href="projects.html" style="--i:3">Projects</a>
+      <a href="experience.html" class="active" style="--i:4">Experience</a>
+      <a href="contact.html" style="--i:5">Contact</a>
+    </nav>
+  </header>
+
+  <section class="experience-section">
+    <h1>My Experience</h1>
+
+    <div class="experience-timeline">
+      <div class="exp-block">
+        <h2>Microsoft Power BI Internship (SmartInternz)</h2>
+        <p><strong>Sep 2024 – Jan 2025</strong><br>
+        • Built dashboards analyzing global inflation using Power BI.<br>
+        • Applied DAX, ETL processes, and data modeling for insights.</p>
+      </div>
+
+      <div class="exp-block">
+        <h2>Deloitte Data Analytics – Forage</h2>
+        <p><strong>Jan 2025</strong><br>
+        • Completed virtual project simulating forensic data analysis.<br>
+        • Used Tableau & Excel to clean, visualize, and classify data.</p>
+      </div>
+
+      <div class="exp-block">
+        <h2>Competitive Programming</h2>
+        <p>
+        • CodeChef: 100 Days Badge, Global Rank 9741<br>
+        • LeetCode: 150+ problems solved<br>
+        • HackerRank: 3 Stars in Java, Python, SQL</p>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

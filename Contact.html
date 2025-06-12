@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | Nishant Barik</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .contact-section {
+      width: 85%;
+      min-height: 100vh;
+      padding: 100px 10% 50px;
+      color: #fff;
+    }
+
+    .contact-section h1 {
+      font-size: 48px;
+      font-weight: 700;
+      margin-bottom: 30px;
+      color: #00abf0;
+      opacity: 0;
+      animation: slideBottom 1s ease forwards;
+    }
+
+    .contact-content {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      opacity: 0;
+      animation: slideLeft 1s ease forwards;
+      animation-delay: 0.6s;
+    }
+
+    .contact-block {
+      background: #27313f;
+      padding: 20px 25px;
+      border-left: 5px solid #00abf0;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,171,240,0.15);
+    }
+
+    .contact-block h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #00abf0;
+    }
+
+    .contact-block p, .contact-block a {
+      font-size: 16px;
+      line-height: 1.8;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .contact-block a:hover {
+      text-decoration: underline;
+      color: #00abf0;
+    }
+
+    .contact-block:nth-child(1) {
+      animation: slideRight 1s ease forwards;
+      animation-delay: 0.8s;
+    }
+
+    .contact-block:nth-child(2) {
+      animation: slideTop 1s ease forwards;
+      animation-delay: 1s;
+    }
+
+    .contact-block:nth-child(3) {
+      animation: slideLeft 1s ease forwards;
+      animation-delay: 1.2s;
+    }
+
+    .contact-block:nth-child(4) {
+      animation: zoomIn 1s ease forwards;
+      animation-delay: 1.4s;
+    }
+
+    .contact-block:nth-child(5) {
+      animation: slideBottom 1s ease forwards;
+      animation-delay: 1.6s;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <a href="#" class="logo">Nishant Barik</a>
+    <nav class="navbar">
+      <a href="index.html" style="--i:1">Home</a>
+      <a href="about.html" style="--i:2">About</a>
+      <a href="projects.html" style="--i:3">Projects</a>
+      <a href="contact.html" class="active" style="--i:4">Contact</a>
+    </nav>
+  </header>
+
+  <section class="contact-section">
+    <h1>Get in Touch</h1>
+
+    <div class="contact-content">
+      <div class="contact-block">
+        <h2>Name</h2>
+        <p>Nishant Barik</p>
+      </div>
+
+      <div class="contact-block">
+        <h2>Phone</h2>
+        <p><a href="tel:+919777312477">+91 9777312477</a></p>
+      </div>
+
+      <div class="contact-block">
+        <h2>Email</h2>
+        <p><a href="mailto:nishantbarik42@gmail.com">nishantbarik42@gmail.com</a></p>
+      </div>
+
+      <div class="contact-block">
+        <h2>LinkedIn</h2>
+        <p><a href="https://linkedin.com/in/nishantbarik" target="_blank">linkedin.com/in/nishantbarik</a></p>
+      </div>
+
+      <div class="contact-block">
+        <h2>GitHub</h2>
+        <p><a href="https://github.com/NishantBarik" target="_blank">github.com/NishantBarik</a></p>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
